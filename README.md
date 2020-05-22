@@ -1,6 +1,6 @@
 # Vue Draggable
 
-<img src="/assets/cover.gif"
+<img src="https://github.com/asilvabe/vue-draggable/blob/master/src/assets/cover.gif"
      alt="Interfaces draggables con Vue"
      style="display: block; margin-left: auto; margin-right: auto;" />
 
