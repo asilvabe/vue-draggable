@@ -1,12 +1,22 @@
 <template>
     <div id="app" class="bg-gray-600">
-        <div class="min-h-screen w-screen pl-64 pt-20">
-            <label class="text-gray-200 shadow font-semibold font-sans">Nuevo usuario</label>
+        <div class="min-h-screen w-screen pl-2 pt-2 pr-2 md:pl-64 md:pt-20">
+            <label class="text-gray-200 shadow font-semibold font-sans">Nuevo usuario</label><br>
             <input type="text" 
                 v-model="newUserName"
-                class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block appearance-none leading-normal mb-2"
+                class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 inline-block appearance-none leading-normal mb-2"
                 v-on:keyup.enter="addUser"
                 placeholder="Presione ENTER para agregarlo"/>
+            <p class="inline-block ml-12 text-white">
+                by 
+                <a 
+                    class="font-bold underline"
+                    href="https://asilvabe.dev" 
+                    target="_blank"
+                >
+                    asilvabe.dev
+                </a>
+            </p>
             <Draggable v-if="users.length > 0" tag="ul" class="w-full max-w-md" :list="users" :animation="200">
                 <li is="user-card" 
                     v-for="user in users" 
